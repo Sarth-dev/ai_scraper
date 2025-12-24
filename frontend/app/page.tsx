@@ -34,6 +34,7 @@ export default function Home() {
     setTaskId(res.data.taskId);
     setSubmitting(false);
   };
+  console.log("submitted task", submitTask)
 
   return (
     <main style={styles.container}>

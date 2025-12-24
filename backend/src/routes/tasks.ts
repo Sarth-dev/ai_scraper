@@ -19,6 +19,7 @@ router.post("/", async (req, res) => {
     .returning();
 
   const task = result[0];
+  console.log("atsk",task)
 
   await taskQueue.add("scrape", {
     taskId: task.id,
@@ -37,7 +38,7 @@ router.get("/:id", async (req, res) => {
     .from(tasks)
     .where(eq(tasks.id, id))
     .limit(1);
-
+console.log("result", result)
   if (result.length === 0) {
     return res.status(404).json({ message: "Task not found" });
   }
