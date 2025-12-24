@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev src/index.ts",
-  "worker": "ts-node-dev src/worker.ts",
-  "start": "node dist/index.js",
-  "build": "tsc"
+     "dev": "ts-node-dev src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "worker": "node dist/worker.js"
   },
   "keywords": [],
   "author": "",
